@@ -18,19 +18,19 @@ body {
 }
 
 .panel-one {
-    background-image: url('1.jpg');
+    background-image: url('img/one.jpg');
 }
 .panel-two {
-    background-image: url('2.jpg');
+    background-image: url('img/two.jpg');
 }
 .panel-three {
-    background-image: url('3.jpg');
+    background-image: url('img/three.jpg');
 }
 .panel-four {
-    background-image: url('4.jpg');
+    background-image: url('img/four.jpg');
 }
 .panel-five {
-    background-image: url('5.jpg');
+    background-image: url('img/five.jpg');
 }
 
 .container {
@@ -71,6 +71,19 @@ body {
 
 .panel.active h3{
     opacity: 1;
+    /* Delay: 0.4s */
+    transition: opacity 0.3s ease-in 0.4s;
 }
 
 /* For smaller screen */
+@media (max-width: 480px){
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none; 
+    }
+
+}
