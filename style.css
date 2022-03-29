@@ -1,0 +1,76 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.panel-one {
+    background-image: url('1.jpg');
+}
+.panel-two {
+    background-image: url('2.jpg');
+}
+.panel-three {
+    background-image: url('3.jpg');
+}
+.panel-four {
+    background-image: url('4.jpg');
+}
+.panel-five {
+    background-image: url('5.jpg');
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+    gap: 1rem;
+}
+
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 5rem;
+    color: #fff;
+    cursor: pointer;
+    /* Defining width with flexbox */
+    flex: 0.5;
+    position: relative;
+    /* Applying animaition on flexbox */
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+    font-size: 2.4rem;
+    position: absolute;
+    /* To put the (h3) on the bottom-left corner */
+    bottom: 2rem;
+    left: 2rem;
+    margin: 0;
+    opacity: 0;
+}
+
+/* When the panel is active increase the width with flexbox */
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3{
+    opacity: 1;
+}
+
+/* For smaller screen */
